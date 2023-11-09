@@ -9,6 +9,7 @@ def read_csv(file_name):
         for row in reader:
             yield row
 
+# Function to write new CSV file 
 def write_objects_to_csv(file_name, header_list, objects):
     with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
